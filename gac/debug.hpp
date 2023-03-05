@@ -11,13 +11,13 @@ namespace gac {
     void print_registers(const engine_type &e) {
 
         std::cout << "------------------------------------" << std::endl;
-        std::cout << "| " << std::bitset<engine_type::n_bits>(high) << " |" << std::endl;
+        std::cout << "| " << std::bitset<engine_type::n_bits>(e.high) << " |" << std::endl;
 
         if (!engine_type::is_encoding) {
-            std::cout << "| " << std::bitset<engine_type::n_bits>(mid) << " |" << std::endl;
+            std::cout << "| " << std::bitset<engine_type::n_bits>(e.mid) << " |" << std::endl;
         }
 
-        std::cout << "| " << std::bitset<engine_type::n_bits>(low)  << " |" << std::endl;
+        std::cout << "| " << std::bitset<engine_type::n_bits>(e.low)  << " |" << std::endl;
         std::cout << "------------------------------------" << std::endl;
     }
 }

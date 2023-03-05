@@ -24,7 +24,7 @@ template <bool _is_encoding> struct engine {
 
     static constexpr single_reg min_value = std::numeric_limits<single_reg>::min();
     static constexpr single_reg max_value = std::numeric_limits<single_reg>::max();
-    static constexpr single_reg guaranteed_range = (single_reg(1) << n_guaranteed_bits) - 1;
+    static constexpr guaranteed_reg guaranteed_range = std::numeric_limits<guaranteed_reg>::max();
 
     static constexpr single_reg mask_first_byte = single_reg(0xFF) << n_bits - 8;
 
